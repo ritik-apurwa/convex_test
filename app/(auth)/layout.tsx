@@ -7,8 +7,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main>
-      <div className="absolute size-full">
+    <main className="h-screen w-screen flex items-center justify-center">
+      <div className="opacity-60 bg-black/20">
         <Image src={authbg1} alt="background" fill className="size-full" />
       </div>
       {children}

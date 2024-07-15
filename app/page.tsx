@@ -3,6 +3,7 @@
 import { useQuery } from "convex/react";
 import { api } from "../convex/_generated/api";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -13,6 +14,13 @@ const page = () => {
         height={400}
         width={500}
       />
+      <Link href="/sign-up">
+      sign up 
+      
+      </Link>
+      <Link href="/sign-in">
+      sign in
+      </Link>
     </div>
   );
 };
