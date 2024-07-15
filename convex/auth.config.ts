@@ -3,7 +3,7 @@
 const authConfig = {
     providers: [
       {
-        domain: "https://famous-macaque-91.clerk.accounts.dev",
+        domain: "https://convex-test.vercel.app.clerk.accounts.dev",
         applicationID: "convex",
       },
     ]
