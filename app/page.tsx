@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { api } from "../convex/_generated/api";
 import Image from "next/image";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 const page = () => {
   return (
@@ -14,13 +15,9 @@ const page = () => {
         height={400}
         width={500}
       />
-      <Link href="/sign-up">
-      sign up 
-      
-      </Link>
-      <Link href="/sign-in">
-      sign in
-      </Link>
+      <Link href="/sign-up">sign up</Link>
+      <Link href="/sign-in">sign in</Link>
+      <UserButton/>
     </div>
   );
 };
