@@ -20,6 +20,14 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'img.freepik.com'
         },
+        {
+          protocol: 'https',
+          hostname: 'image.freepik.com'
+        },
+        {
+          protocol: 'https',
+          hostname: 'img.clerk.com'
+        },
       ]
     }
   };

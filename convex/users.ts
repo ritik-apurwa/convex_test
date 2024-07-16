@@ -116,3 +116,11 @@ export const deleteUser = internalMutation({
     await ctx.db.delete(user._id);
   },
 });
+
+export const getAllUsers = query({
+  args: {},
+  handler: async (ctx) => {
+    const users = await ctx.db.query("users").collect();
+    return users;
+  },
+});
