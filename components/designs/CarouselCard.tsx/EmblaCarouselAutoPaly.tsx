@@ -2,9 +2,14 @@ import React, { useCallback, useEffect, useState } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
-import Image, { StaticImageData } from "next/image";
-import { usePrevNextButtons } from "../CarouselCard.tsx/EmblaCarouselButton";
-import { hti1, hti2, hti3, hti4, hti5 } from "@/public/freepikImages";
+import Image from "next/image";
+
+import { carouselData, MockCarouselItem } from "./CarouselData";
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from "./EmblaCarouselButton";
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -61,7 +66,7 @@ const WinnersCarouselCard: React.FC<PropType> = (props) => {
     <div className="embla max-w-96 h-fit ">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {HowToInstall.map((item, index) => (
+          {carouselData.map((item, index) => (
             <div className="embla__slide border-2" key={index}>
               <CarouselItem item={item} />
             </div>
@@ -87,61 +92,31 @@ const WinnersCarouselCard: React.FC<PropType> = (props) => {
   );
 };
 
-interface HowToInstall {
-  id: number;
-  imageUrl: StaticImageData;
-  title: string;
-  description: string;
-}
-
 interface CarouselItemProps {
-  item: HowToInstall;
+  item: MockCarouselItem;
 }
-
-const HowToInstall: HowToInstall[] = [
-  {
-    id: 1,
-    imageUrl: hti1,
-    title: "step-1",
-    description: "click 'download' button in the popup below to continue   ",
-  },
-  {
-    id: 2,
-    imageUrl: hti2,
-    title: "step-1",
-    description: "click 'download' button in the popup below to continue   ",
-  },
-  {
-    id: 3,
-    imageUrl: hti3,
-    title: "step-1",
-    description: "click 'download' button in the popup below to continue   ",
-  },
-  {
-    id: 4,
-    imageUrl: hti4,
-    title: "step-1",
-    description: "click 'download' button in the popup below to continue   ",
-  },
-  {
-    id: 5,
-    imageUrl: hti5,
-    title: "step-1",
-    description: "click 'download' button in the popup below to continue   ",
-  },
-];
 
 const CarouselItem: React.FC<CarouselItemProps> = ({ item }) => {
   return (
-    <section className="min-h-[60vh] w-full flex flex-row">
-      <div>
-        <Image src={item.imageUrl} height={400} width={500} alt={item.title} />
-      </div>
-      <div>
-        <h1>{item.title}</h1>
-        <hr className="h-2 bg-white" />
-        <p>{item.description}</p>
-        <hr className="h-2 bg-white" />
+    <section className=" w-full mx-auto flex  ">
+      <div className="h-48 bg-white   flex flex-col  p-4">
+        <div className="flex flex-row gap-x-4 ">
+          <div className="min-w-20 max-w-20 max-h-20 rounded-full">
+            <Image
+              src={item.imageUrl}
+              height={500}
+              width={500}
+              alt={item.title}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+
+          <div className=" items-start flex flex-col h-20 justify-center text-start ">
+            <h1> {item.title}</h1>
+            <p className="text-orange-500 font-bold"> Won 2Lakh ruppes</p>
+          </div>
+        </div>
+        <div className="text-gray-400">{item.description}</div>
       </div>
     </section>
   );

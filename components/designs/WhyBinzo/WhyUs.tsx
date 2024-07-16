@@ -20,10 +20,6 @@ const WhyUs = () => {
         <WhyCard image={whyUsLanguage} title="6+" description=" Languages" />
         <WhyCard image={whyUsSupport} title="24x7" description=" Support" />
       </div>
-
-      <div className="relative">
-        <BannerCard />
-      </div>
     </section>
   );
 };

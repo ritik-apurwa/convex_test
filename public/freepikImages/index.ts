@@ -13,3 +13,11 @@ import topgamessvg from "./topGamesBanner.webp"
 import topgamessvg2 from "./topgamessvg.svg"
 
 export { authbg1, bannerSvg,whyUsNoBot,whyUsSecure, topgamessvg,topgamessvg2,   whyUsLanguage, whyUsSupport , homebg  };
+
+import hti1 from '../htiimages/dhoni_step1.webp'
+import hti2 from "../htiimages/dhoni_step2.webp"
+import hti3 from "../htiimages/dhoni_step3.webp"
+import hti4 from "../htiimages/Step-3-Englishv2.webp"
+import hti5 from "../htiimages/Step-4-Englishv2.webp"
+
+export {hti1, hti2, hti3, hti4, hti5}
