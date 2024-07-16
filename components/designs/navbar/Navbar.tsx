@@ -67,12 +67,18 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
             <div className="text-2xl font-bold">Logo</div>
+
+
             <div className="md:hidden flex flex-row items-center">
               <div className="bg-white min-h-[200px] flex items-center justify-center">
-                <button className="px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+                <button className="lg:px-6 px-3 py-2 text-xs font-medium bg-indigo-500 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
                   download game win money
                 </button>
               </div>
+
+
+
+
               <Menu active={isMenuOpen} setActive={setIsMenuOpen} />
             </div>
             <div className="hidden md:flex space-x-4">

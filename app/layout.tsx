@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Play } from "next/font/google";
+
 import "./globals.css";
 import ConvexClerkProvider from "@/components/providers/ConvexClientProvider";
 import Navbar from "@/components/designs/navbar/Navbar";
 
 
 const inter = Inter({ subsets: ["latin"] });
+const play  = Play({ subsets: ["latin"] , weight:["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Convex Clerk Setup",
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={play.className}>
         <ConvexClerkProvider>
           <Navbar/>
           {children}
